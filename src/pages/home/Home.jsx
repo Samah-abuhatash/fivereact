@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';  // استيراد ToastContainer مع toast
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from '../../components/loader/Loader';
 
 function Home() {
   const [error, setError] = useState("");
@@ -58,7 +59,7 @@ function Home() {
   }
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loader/>;
   }
 
   return (
